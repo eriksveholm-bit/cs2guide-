@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>CS2 Community Guide</title>
+<link rel="icon" href="assets/icons/logo.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="card">
+  <div class="nav container">
+    <div class="logo">
+      <img src="assets/icons/logo.svg" alt="Logo" width="28" height="28">
+      <span data-i18n="hero_title">CS2 Community Guide</span>
+    </div>
+    <div style="margin-left:auto;display:flex;gap:12px;align-items:center">
+      <a class="btn" href="#home" data-i18n="nav_home">Home</a>
+      <a class="btn" href="#maps" data-i18n="nav_maps">Maps</a>
+      <a class="btn" href="#weapons" data-i18n="nav_weapons">Weapons</a>
+      <a class="btn" href="#crosshair" data-i18n="nav_cross">Crosshair & Viewmodel</a>
+      <div class="langswitch">
+        <button data-lang="en" class="badge">EN</button>
+        <button data-lang="sv" class="badge">SV</button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container layout">
+  <aside class="sidebar">
+    <div class="section">
+      <div class="badge">Quick links</div>
+      <a href="#maps">All maps</a>
+      <a href="#videos">Smoke videos</a>
+      <a href="#weapons">Top rifles</a>
+      <a href="#crosshair">Crosshair presets</a>
+    </div>
+    <div class="section">
+      <div class="badge">Language</div>
+      <div class="langswitch">
+        <button data-lang="en" class="badge">English</button>
+        <button data-lang="sv" class="badge">Svenska</button>
+      </div>
+      <p class="small">Sidebar sticks on desktop, moves below on mobile.</p>
+    </div>
+  </aside>
+
+  <main class="content">
+    <section id="home" class="card section">
+      <h1 data-i18n="hero_title">CS2 Community Guide</h1>
+      <p data-i18n="hero_sub">Maps, smokes, weapons, and customization — clean and fast.</p>
+    </section>
+
+    <section id="maps" class="card section">
+      <h2 data-i18n="maps_title">Maps & Smokes</h2>
+      <div class="tabbar">
+        <button data-tab="mirage">Mirage</button>
+        <button data-tab="inferno">Inferno</button>
+        <button data-tab="nuke">Nuke</button>
+        <button data-tab="overpass">Overpass</button>
+        <button data-tab="ancient">Ancient</button>
+        <button data-tab="anubis">Anubis</button>
+        <button data-tab="vertigo">Vertigo</button>
+        <button data-tab="dust2">Dust II</button>
+      </div>
+
+      <!-- Panels -->
+      {panels}
+    </section>
+
+    <section id="videos" class="card section">
+      <h2 data-i18n="videos_title">Smoke Tutorials (YouTube embeds)</h2>
+      <p class="small">Replace VIDEO_ID with your chosen tutorials later. These iframes won't 404 your site if the ID is wrong; YouTube shows an error inside the frame instead.</p>
+      <div class="grid cards">
+        <div class="card">
+          <h3>Mirage A Site Smokes</h3>
+          <div class="figure">
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID" title="Mirage A Smokes" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+        <div class="card">
+          <h3>Inferno Banana Control</h3>
+          <div class="figure">
+            <iframe width="100%" height="315" src="https://www.youtube.com/embed/VIDEO_ID" title="Inferno Smokes" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="weapons" class="card section">
+      <h2 data-i18n="weapons_title">Weapons (key stats)</h2>
+      <div class="accordion">
+        <div class="item">
+          <div class="head"><strong>AK‑47</strong><span class="badge">$2700</span></div>
+          <div class="body">
+            <div class="grid">
+              <div class="figure"><img src="assets/images/ak47.png" alt="AK-47 render"></div>
+              <table class="table">
+                <tr><th>Role</th><td>Rifle (T)</td></tr>
+                <tr><th>Ammo</th><td>30 / 90</td></tr>
+                <tr><th>Damage</th><td>High</td></tr>
+                <tr><th>Notes</th><td>One-shot headshot potential; requires recoil control.</td></tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="head"><strong>M4A1‑S</strong><span class="badge">$2900</span></div>
+          <div class="body">
+            <div class="grid">
+              <div class="figure"><img src="assets/images/m4a1s.png" alt="M4A1-S render"></div>
+              <table class="table">
+                <tr><th>Role</th><td>Rifle (CT)</td></tr>
+                <tr><th>Ammo</th><td>20 / 80</td></tr>
+                <tr><th>Damage</th><td>Medium</td></tr>
+                <tr><th>Notes</th><td>Suppressed; accurate first bullet and good for anchors.</td></tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="head"><strong>AWP</strong><span class="badge">$4750</span></div>
+          <div class="body">
+            <div class="grid">
+              <div class="figure"><img src="assets/images/awp.png" alt="AWP render"></div>
+              <table class="table">
+                <tr><th>Role</th><td>Sniper</td></tr>
+                <tr><th>Ammo</th><td>5 / 30</td></tr>
+                <tr><th>Damage</th><td>Very High</td></tr>
+                <tr><th>Notes</th><td>Pick control and space creation; expensive, play around it.</td></tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="head"><strong>USP‑S</strong><span class="badge">$200</span></div>
+          <div class="body">
+            <div class="grid">
+              <div class="figure"><img src="assets/images/usp_s.png" alt="USP-S render"></div>
+              <table class="table">
+                <tr><th>Role</th><td>Pistol (CT)</td></tr>
+                <tr><th>Ammo</th><td>12 / 24</td></tr>
+                <tr><th>Damage</th><td>Medium</td></tr>
+                <tr><th>Notes</th><td>Silenced; accurate tap potential.</td></tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="crosshair" class="card section">
+      <h2 data-i18n="cross_title">Crosshair & Viewmodel</h2>
+      <div class="grid cards">
+        <div class="card">
+          <h3>Balanced Crosshair</h3>
+          <pre class="small">cl_crosshairsize 2.5
+cl_crosshairthickness 1
+cl_crosshairgap -1
+cl_crosshair_t 0
+cl_crosshaircolor 4
+cl_crosshairalpha 255</pre>
+        </div>
+        <div class="card">
+          <h3>Minimal Viewmodel</h3>
+          <pre class="small">viewmodel_fov 68
+viewmodel_offset_x 2
+viewmodel_offset_y 2
+viewmodel_offset_z -2
+r_drawviewmodel 1</pre>
+        </div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<footer class="small">© 2025 CS2 Community Guide — Not affiliated with Valve.</footer>
+
+<script src="script.js"></script>
+<script>
+// Build map panels with zoomable images
+const panelsHTML = `
+  <div data-panel="mirage" style="display:none">
+    <div class="zoomwrap">
+      <div class="zoom-controls">
+        <button class="zoom-in">+</button><button class="zoom-out">-</button><button class="zoom-1">100%</button>
+      </div>
+      <img src="assets/images/mirage_map.png" alt="Mirage map high-res">
+    </div>
+  </div>
+  <div data-panel="inferno" style="display:none">
+    <div class="zoomwrap">
+      <div class="zoom-controls">
+        <button class="zoom-in">+</button><button class="zoom-out">-</button><button class="zoom-1">100%</button>
+      </div>
+      <img src="assets/images/inferno_map.png" alt="Inferno map high-res">
+    </div>
+  </div>
+  <div data-panel="nuke" style="display:none">
+    <div class="zoomwrap">
+      <div class="zoom-controls">
+        <button class="zoom-in">+</button><button class="zoom-out">-</button><button class="zoom-1">100%</button>
+      </div>
+      <img src="assets/images/nuke_map.png" alt="Nuke map high-res">
+    </div>
+  </div>
+  <div data-panel="overpass" style="display:none">
+    <div class="zoomwrap">
+      <div class="zoom-controls">
+        <button class="zoom-in">+</button><button class="zoom-out">-</button><button class="zoom-1">100%</button>
+      </div>
+      <img src="assets/images/overpass_map.png" alt="Overpass map high-res">
+    </div>
+  </div>
+  <div data-panel="ancient" style="display:none">
+    <div class="zoomwrap">
+      <div class="zoom-controls">
+        <button class="zoom-in">+</button><button class="zoom-out">-</button><button class="zoom-1">100%</button>
+      </div>
+      <img src="assets/images/ancient_map.png" alt="Ancient map high-res">
+    </div>
+  </div>
+  <div data-panel="anubis" style="display:none">
+    <div class="zoomwrap">
+      <div class="zoom-controls">
+        <button class="zoom-in">+</button><button class="zoom-out">-</button><button class="zoom-1">100%</button>
+      </div>
+      <img src="assets/images/anubis_map.png" alt="Anubis map high-res">
+    </div>
+  </div>
+  <div data-panel="vertigo" style="display:none">
+    <div class="zoomwrap">
+      <div class="zoom-controls">
+        <button class="zoom-in">+</button><button class="zoom-out">-</button><button class="zoom-1">100%</button>
+      </div>
+      <img src="assets/images/vertigo_map.png" alt="Vertigo map high-res">
+    </div>
+  </div>
+  <div data-panel="dust2" style="display:none">
+    <div class="zoomwrap">
+      <div class="zoom-controls">
+        <button class="zoom-in">+</button><button class="zoom-out">-</button><button class="zoom-1">100%</button>
+      </div>
+      <img src="assets/images/dust2_map.png" alt="Dust II map high-res">
+    </div>
+  </div>
+`;
+document.currentScript.insertAdjacentHTML("beforebegin", panelsHTML);
+</script>
+</body>
+</html>
